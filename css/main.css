@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff05ff;
+  background: #aa6309;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2460,6 +2460,7 @@ body {
   background: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain; /* 将background-size设置为contain */
+  background-size: contain;
   background-position: center;
+  background-color: rgba(255,255,255,0.5); /* 设置网页背景颜色为半透明白色 */
 }
