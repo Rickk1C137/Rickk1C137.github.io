@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #406f61;
+  background: #631a17;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2460,21 +2460,7 @@ body {
   background: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-}
-.post-block {
-  background: rgba(255,255,255,0.8) none repeat scroll !important;
-}
-.pagination {
-  background: rgba(135,206,235,0.9);
-}
-.header-inner {
-  background: rgba(135,206,235,0.9);
-}
-.sidebar-inner {
-  background: rgba(135,206,235,0.9) none repeat scroll !important;
-}
-.popup {
-  opacity: 0.9;
+  opacity: 0.7; /* 设置网页内容透明度为 0.7（70% 不透明） */
 }
