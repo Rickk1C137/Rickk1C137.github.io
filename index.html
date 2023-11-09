@@ -273,6 +273,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/match/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="我的心已被蕾塞夺走，此生或许再无悲喜">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/09/match/" class="post-title-link" itemprop="url">match</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-09 13:11:18 / 修改时间：13:21:11" itemprop="dateCreated datePublished" datetime="2023-11-09T13:11:18+08:00">2023-11-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/" itemprop="url" rel="index"><span itemprop="name">Writeup</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>#网络与信息安全管理员(工业互联网安全)赛项<br><code># 1.MES安全加固步骤(样题任务二)  ## 1. 操作系统安全加固：  ### 删除无用账户和限制su命令切换权限：  ```bash sudo userdel test1 sudo userdel test2 echo &quot;test3 ALL=(ALL:ALL) ALL&quot; &gt;&gt; /etc/sudoers echo &quot;test4 ALL=(ALL:ALL) !ALL&quot; &gt;&gt; /etc/sudoers</code></p>
+<h2 id="2-SSH安全设置："><a href="#2-SSH安全设置：" class="headerlink" title="2. SSH安全设置："></a>2. SSH安全设置：</h2><p>编辑SSH配置文件 <code>/etc/ssh/sshd_config</code>，修改以下配置：</p>
+<p><code>PermitRootLogin no AllowTcpForwarding no X11Forwarding no</code></p>
+<p>重启SSH服务：</p>
+<p><code>sudo service ssh restart</code></p>
+<h2 id="3-数据库安全加固："><a href="#3-数据库安全加固：" class="headerlink" title="3. 数据库安全加固："></a>3. 数据库安全加固：</h2><h3 id="删除默认安装数据库、匿名账户、重设root账户口令和修改默认端口："><a href="#删除默认安装数据库、匿名账户、重设root账户口令和修改默认端口：" class="headerlink" title="删除默认安装数据库、匿名账户、重设root账户口令和修改默认端口："></a>删除默认安装数据库、匿名账户、重设root账户口令和修改默认端口：</h3><p><code>DROP DATABASE IF EXISTS test; DELETE FROM mysql.user WHERE User=&#39;&#39;; ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;ComplexPassword123&#39;; -- 修改默认端口为13306（需要在数据库配置文件中修改端口设置）</code></p>
+<h3 id="设置数据库root账户仅允许本地连接："><a href="#设置数据库root账户仅允许本地连接：" class="headerlink" title="设置数据库root账户仅允许本地连接："></a>设置数据库root账户仅允许本地连接：</h3><p>在数据库配置文件中（通常是 <code>/etc/mysql/my.cnf</code> 或 <code>/etc/my.cnf</code>）设置以下内容：</p>
+<p><code>bind-address = 127.0.0.1</code></p>
+<h2 id="数据看板配置："><a href="#数据看板配置：" class="headerlink" title="数据看板配置："></a>数据看板配置：</h2><p>确保数据看板的连接配置正确，包括数据库地址、端口、用户名和密码等信息。</p>
+<p>以上配置完成后，应能够通过数据看板获取数据。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/08/ssh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -663,7 +743,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -676,7 +756,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -762,7 +842,7 @@ $(document).ready(function() {
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共606字</span>
+  <span class="post-count">博客全站共921字</span>
 </div>
         
 <div class="busuanzi-count">
