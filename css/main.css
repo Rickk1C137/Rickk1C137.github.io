@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #14ffff;
+  background: #866cff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2598,6 +2598,8 @@ body {
   background: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-size: contain;
   background-position: center;
   opacity: 0.7; /* 设置网页内容透明度为 0.7（70% 不透明） */
