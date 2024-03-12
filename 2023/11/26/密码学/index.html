@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","width":370,"padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="仿射密码playfairpolybius">
+  <meta name="description" content="仿射密码playfairpolybius 寒假因为比赛重新开始学习 Buuctf一眼就解密下面的字符串解密后便能获得flag：ZmxhZ3tUSEVfRkxBR19PRl9USElTX1NUUklOR30&#x3D; 注意：得到的 flag 请包上 flag{} 提交 字符末尾的’&#x3D;’为base64就加密的标志，尝试解密base63得到flag{THE_FLAG_OF_THIS_STRI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="密码学">
 <meta property="og:url" content="http://example.com/2023/11/26/%E5%AF%86%E7%A0%81%E5%AD%A6/index.html">
 <meta property="og:site_name" content="RickkCity">
-<meta property="og:description" content="仿射密码playfairpolybius">
+<meta property="og:description" content="仿射密码playfairpolybius 寒假因为比赛重新开始学习 Buuctf一眼就解密下面的字符串解密后便能获得flag：ZmxhZ3tUSEVfRkxBR19PRl9USElTX1NUUklOR30&#x3D; 注意：得到的 flag 请包上 flag{} 提交 字符末尾的’&#x3D;’为base64就加密的标志，尝试解密base63得到flag{THE_FLAG_OF_THIS_STRI">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-26T01:59:16.000Z">
-<meta property="article:modified_time" content="2023-11-26T02:14:10.129Z">
+<meta property="article:modified_time" content="2024-03-11T13:14:08.822Z">
 <meta property="article:author" content="Rickk">
 <meta name="twitter:card" content="summary">
 
@@ -218,10 +218,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-11-26 09:59:16 / 修改时间：10:14:10" itemprop="dateCreated datePublished" datetime="2023-11-26T09:59:16+08:00">2023-11-26</time>
+              <time title="创建时间：2023-11-26 09:59:16" itemprop="dateCreated datePublished" datetime="2023-11-26T09:59:16+08:00">2023-11-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-03-11 21:14:08" itemprop="dateModified" datetime="2024-03-11T21:14:08+08:00">2024-03-11</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -242,6 +248,20 @@
 
       
         <p>仿射密码<br>playfair<br>polybius</p>
+<p>寒假因为比赛重新开始学习</p>
+<h1 id="Buuctf"><a href="#Buuctf" class="headerlink" title="Buuctf"></a>Buuctf</h1><h2 id="一眼就解密"><a href="#一眼就解密" class="headerlink" title="一眼就解密"></a>一眼就解密</h2><p><em>下面的字符串解密后便能获得flag：ZmxhZ3tUSEVfRkxBR19PRl9USElTX1NUUklOR30&#x3D; 注意：得到的 flag 请包上 flag{} 提交</em></p>
+<p>字符末尾的’&#x3D;’为base64就加密的标志，尝试解密base63得到flag{THE_FLAG_OF_THIS_STRING}</p>
+<h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><p><em>e00cf25ad42683b3df678c61f42c6bda</em></p>
+<p>根据题目就知道是md5加密，解密后得到flag为admin1</p>
+<h2 id="URL编码"><a href="#URL编码" class="headerlink" title="URL编码"></a>URL编码</h2><p><em>%66%6c%61%67%7b%61%6e%64%20%31%3d%31%7d</em></p>
+<p>根据题目得知是URL编码，直接解密即可，得到flag{and 1&#x3D;1}</p>
+<h2 id="看我回旋踢"><a href="#看我回旋踢" class="headerlink" title="看我回旋踢"></a>看我回旋踢</h2><p><em>synt{5pq1004q-86n5-46q8-o720-oro5on0417r1}</em></p>
+<p>由题目格式可以推测为凯撒密码，由f到s的偏移量为13，所以本题是rot13加密，直接解密得到flag{5cd1004d-86a5-46d8-b720-beb5ba0417e1}</p>
+<h2 id="摩丝"><a href="#摩丝" class="headerlink" title="摩丝"></a>摩丝</h2><p>.. .-.. — …- . -.– — ..-</p>
+<p>直接表明是摩斯密码，解密得到ILOVEYOU</p>
+<h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p><em>姓名：张三</em><br><em>生日：19900315</em></p>
+<p><em>key格式为key{xxxxxxxxxx}</em></p>
+<p>密码格式为10位，推测为姓名缩写+生日，flag为flag{zs19900315}</p>
 
     </div>
 
@@ -380,6 +400,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Buuctf"><span class="nav-number">1.</span> <span class="nav-text">Buuctf</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%9C%BC%E5%B0%B1%E8%A7%A3%E5%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">一眼就解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MD5"><span class="nav-number">1.2.</span> <span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#URL%E7%BC%96%E7%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text">URL编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9C%8B%E6%88%91%E5%9B%9E%E6%97%8B%E8%B8%A2"><span class="nav-number">1.4.</span> <span class="nav-text">看我回旋踢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%A9%E4%B8%9D"><span class="nav-number">1.5.</span> <span class="nav-text">摩丝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#password"><span class="nav-number">1.6.</span> <span class="nav-text">password</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -395,7 +416,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -508,7 +529,7 @@ $(document).ready(function() {
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.2k字</span>
+  <span class="post-count">博客全站共9.7k字</span>
 </div>
         
 <div class="busuanzi-count">
