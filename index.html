@@ -310,7 +310,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-12 21:01:06" itemprop="dateModified" datetime="2024-03-12T21:01:06+08:00">2024-03-12</time>
+                <time title="修改时间：2024-03-14 18:25:09" itemprop="dateModified" datetime="2024-03-14T18:25:09+08:00">2024-03-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -340,30 +340,14 @@
           <h1 id="Giggachad"><a href="#Giggachad" class="headerlink" title="Giggachad"></a>Giggachad</h1><p>在开启靶机后在kali中扫描扫不到靶机，判断需要更改启动项</p>
 <p>在靶机开机时按e编辑，按如图将<em>ro quie</em>t改为<em>rw single init&#x3D;&#x2F;bin&#x2F;bash</em></p>
 <p><img src="/images/week5/config.png" alt="注释截图"></p>
-<p>需要将网卡由enp0s3改为ens33</p>
-<p><img src="/images/week5/network.png" alt="注释截图"></p>
-<p><img src="/images/week5/ens33.png" alt="注释截图"></p>
-<p>然后用namp扫描靶机ip</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -A -p- &#x27;IP&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/week5/nmap.png" alt="注释截图"></p>
-<p>发现靶机开启了21，22和80端口，先尝试tcp，发现可以通过匿名(anonymous)登录</p>
-<p>成功登录后发现一个叫chadinfo的文件</p>
-<p><img src="/images/week5/ftp.png" alt="注释截图"></p>
-<p>查看文件类型发现chadinfo是压缩文件</p>
-<p>于是解压得到一个文本文档</p>
-<p><img src="/images/week5/unzip.png" alt="注释截图"></p>
-<p>提示说用户名是chad，要去&#x2F;drippinchad.png的目录里寻找线索</p>
-<p><img src="/images/week5/80.png" alt="注释截图"></p>
-<p>说是他最喜欢的地方，那么这个地名就大概率为密码</p>
-<p>用谷歌搜图搜索这张图片，得到地名为maiden’s tower</p>
-<p><img src="/images/week5/google.png" alt="注释截图"></p>
-<p>用chad和maidenstower登录ssh服务</p>
-<p><img src="/images/week5/ssh.png" alt="注释截图"></p>
-<p>在当前目录下就有一个user.txt，里面是第一个flag</p>
-<p><img src="/images/week5/flag1.png" alt="注释截图"></p>
-<p>尝试提权</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/03/11/%E7%AC%AC%E4%BA%8C%E5%AD%A6%E6%9C%9F%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%B6%E6%9C%BA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
