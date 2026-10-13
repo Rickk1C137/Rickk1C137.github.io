@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rickk1c137.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","width":280,"padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RickkCity">
+<meta property="og:url" content="https://rickk1c137.github.io/page/2/index.html">
+<meta property="og:site_name" content="RickkCity">
+<meta property="og:description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Rickk">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="靶场复现">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://rickk1c137.github.io/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>RickkCity</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">RickkCity</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">网络安全学习与个人笔记</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/27/OWASP%E9%9D%B6%E5%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/27/OWASP%E9%9D%B6%E5%9C%BA/" class="post-title-link" itemprop="url">OWASP靶场</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-27 20:15:50" itemprop="dateCreated datePublished" datetime="2023-11-27T20:15:50+08:00">2023-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/" itemprop="url" rel="index"><span itemprop="name">Writeup</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>打开OWASP靶机，查看自动显示的ip地址，并在浏览器进入。</p>
+<p><img src="/images/OWASP/upload/environment.png" alt="注释截图"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/27/OWASP%E9%9D%B6%E5%9C%BA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/26/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/26/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-title-link" itemprop="url">密码学</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-26 09:59:16" itemprop="dateCreated datePublished" datetime="2023-11-26T09:59:16+08:00">2023-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>仿射密码<br>playfair<br>polybius</p>
+<p>寒假因为比赛重新开始学习</p>
+<h1 id="Buuctf"><a href="#Buuctf" class="headerlink" title="Buuctf"></a>Buuctf</h1><h2 id="一眼就解密"><a href="#一眼就解密" class="headerlink" title="一眼就解密"></a>一眼就解密</h2><p><em>下面的字符串解密后便能获得flag：ZmxhZ3tUSEVfRkxBR19PRl9USElTX1NUUklOR30&#x3D; 注意：得到的 flag 请包上 flag{} 提交</em></p>
+<p>字符末尾的’&#x3D;’为base64就加密的标志，尝试解密base63得到flag{THE_FLAG_OF_THIS_STRING}</p>
+<h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><p><em>e00cf25ad42683b3df678c61f42c6bda</em></p>
+<p>根据题目就知道是md5加密，解密后得到flag为admin1</p>
+<h2 id="URL编码"><a href="#URL编码" class="headerlink" title="URL编码"></a>URL编码</h2><p><em>%66%6c%61%67%7b%61%6e%64%20%31%3d%31%7d</em></p>
+<p>根据题目得知是URL编码，直接解密即可，得到flag{and 1&#x3D;1}</p>
+<h2 id="看我回旋踢"><a href="#看我回旋踢" class="headerlink" title="看我回旋踢"></a>看我回旋踢</h2><p><em>synt{5pq1004q-86n5-46q8-o720-oro5on0417r1}</em></p>
+<p>由题目格式可以推测为凯撒密码，由f到s的偏移量为13，所以本题是rot13加密，直接解密得到flag{5cd1004d-86a5-46d8-b720-beb5ba0417e1}</p>
+<h2 id="摩丝"><a href="#摩丝" class="headerlink" title="摩丝"></a>摩丝</h2><p>.. .-.. — …- . -.– — ..-</p>
+<p>直接表明是摩斯密码，解密得到ILOVEYOU</p>
+<h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p><em>姓名：张三</em><br><em>生日：19900315</em></p>
+<p><em>key格式为key{xxxxxxxxxx}</em></p>
+<p>密码格式为10位，推测为姓名缩写+生日，flag为flag{zs19900315}</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%B6%E6%9C%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%B6%E6%9C%BA/" class="post-title-link" itemprop="url">第一周靶机</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-25 20:04:57" itemprop="dateCreated datePublished" datetime="2023-11-25T20:04:57+08:00">2023-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/writeuop/" itemprop="url" rel="index"><span itemprop="name">writeuop</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/writeuop/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CTF攻击及提权过程笔记"><a href="#CTF攻击及提权过程笔记" class="headerlink" title="CTF攻击及提权过程笔记"></a>CTF攻击及提权过程笔记</h1><h2 id="目标识别与扫描"><a href="#目标识别与扫描" class="headerlink" title="目标识别与扫描"></a>目标识别与扫描</h2><ol>
+<li>启动靶机后，使用<code>arp-scan -l</code>扫描，发现靶机IP为192.168.80.155。<br><img src="/images/week1/arp-scan.png" alt="注释截图"></li>
+<li>使用<code>nmap -p-</code>扫描常用端口，发现开放22和80端口。<br><img src="/images/week1/nmap.png" alt="注释截图"></li>
+<li>通过Firefox访问80端口，输入用户名后点击”startthectf”.</li>
+</ol>
+<p><img src="/images/www.png" alt="注释截图"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/25/%E7%AC%AC%E4%B8%80%E5%91%A8%E9%9D%B6%E6%9C%BA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/20/%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/20/%E6%95%B0%E5%AD%A6%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">数学复习</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-20 20:58:44" itemprop="dateCreated datePublished" datetime="2023-11-20T20:58:44+08:00">2023-11-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="个人总结-想到什么写什么"><a href="#个人总结-想到什么写什么" class="headerlink" title="个人总结 想到什么写什么"></a>个人总结 想到什么写什么</h1><h2 id="韦达定理"><a href="#韦达定理" class="headerlink" title="韦达定理"></a>韦达定理</h2><p>是一种将一元二次方程的根与系数之间的关系表示出来的方法。对于一元二次方程 ax2+bx+c&#x3D;0，韦达定理表示如下：</p>
+<ol>
+<li><p>设方程的根为 x1​ 和 x2​，则有： x1​+x2​&#x3D;−a&#x2F;b​</p>
+</li>
+<li><p>且有： x1​⋅x2​&#x3D;a&#x2F;c​</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/09/%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%91%98(%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8)%E8%B5%9B%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/09/%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%91%98(%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8)%E8%B5%9B%E9%A1%B9/" class="post-title-link" itemprop="url">match</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-09 13:11:18" itemprop="dateCreated datePublished" datetime="2023-11-09T13:11:18+08:00">2023-11-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/" itemprop="url" rel="index"><span itemprop="name">Writeup</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><code># 1.MES安全加固步骤(样题任务二)  ## 1. 操作系统安全加固：  ### 删除无用账户和限制su命令切换权限：  ```bash sudo userdel test1 sudo userdel test2 echo &quot;test3 ALL=(ALL:ALL) ALL&quot; &gt;&gt; /etc/sudoers echo &quot;test4 ALL=(ALL:ALL) !ALL&quot; &gt;&gt; /etc/sudoers</code></p>
+<h2 id="2-SSH安全设置："><a href="#2-SSH安全设置：" class="headerlink" title="2. SSH安全设置："></a>2. SSH安全设置：</h2><p>编辑SSH配置文件 <code>/etc/ssh/sshd_config</code>，修改以下配置：</p>
+<p><code>PermitRootLogin no AllowTcpForwarding no X11Forwarding no</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/09/%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%91%98(%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%89%E5%85%A8)%E8%B5%9B%E9%A1%B9/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/08/ssh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/08/ssh/" class="post-title-link" itemprop="url">ssh免密登录</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-08 20:46:30" itemprop="dateCreated datePublished" datetime="2023-11-08T20:46:30+08:00">2023-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95-%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">渗透测试 - 学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="SSH免密登录实验步骤"><a href="#SSH免密登录实验步骤" class="headerlink" title="SSH免密登录实验步骤"></a>SSH免密登录实验步骤</h1><p>在本实验中，我们将学习如何在Ubuntu和Kali虚拟机之间建立SSH免密登录，使得用户可以无需密码即可在两台虚拟机之间进行安全的远程访问。</p>
+<h2 id="步骤1：生成SSH密钥对（在Ubuntu虚拟机上）"><a href="#步骤1：生成SSH密钥对（在Ubuntu虚拟机上）" class="headerlink" title="步骤1：生成SSH密钥对（在Ubuntu虚拟机上）"></a>步骤1：生成SSH密钥对（在Ubuntu虚拟机上）</h2><ol>
+<li>打开终端。</li>
+<li>输入以下命令生成SSH密钥对：<br>ssh-keygen</li>
+</ol>
+<p>按Enter保持默认设置生成密钥对。</p>
+<h2 id="步骤2：将公钥复制到目标主机（Kali虚拟机）"><a href="#步骤2：将公钥复制到目标主机（Kali虚拟机）" class="headerlink" title="步骤2：将公钥复制到目标主机（Kali虚拟机）"></a>步骤2：将公钥复制到目标主机（Kali虚拟机）</h2><ol>
+<li>使用<code>ssh-copy-id</code>命令将公钥复制到Kali虚拟机：<br>ssh-copy-id kali@kali_ip_address<br>（将<code>kali_ip_address</code>替换为Kali虚拟机的IP地址）</li>
+</ol>
+<h2 id="步骤3：配置SSH服务器（在Kali虚拟机上）"><a href="#步骤3：配置SSH服务器（在Kali虚拟机上）" class="headerlink" title="步骤3：配置SSH服务器（在Kali虚拟机上）"></a>步骤3：配置SSH服务器（在Kali虚拟机上）</h2><ol>
+<li><p>确保SSH服务正在运行：<br>sudo service ssh start**(重要)**</p>
+</li>
+<li><p>检查SSH配置文件<code>/etc/ssh/sshd_config</code>，确保以下配置项：<br>PasswordAuthentication yes<br>PubkeyAuthentication yes</p>
+</li>
+<li><p>保存并退出配置文件，然后重启SSH服务：<br>sudo service ssh restart<code>（可选）</code></p>
+</li>
+</ol>
+<p>现在，你可以在Ubuntu虚拟机上使用SSH无需密码登录到Kali虚拟机：<br>ssh kali@kali_ip_address</p>
+<p>以上就是SSH免密登录的步骤。希望对你有所帮助！<br><code>chatgpt我的超人</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/07/Begin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/07/Begin/" class="post-title-link" itemprop="url">博客搭建记录</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-07 13:55:37" itemprop="dateCreated datePublished" datetime="2023-11-07T13:55:37+08:00">2023-11-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-13 14:09:54" itemprop="dateModified" datetime="2026-10-13T14:09:54+08:00">2026-10-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index"><span itemprop="name">Diary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Wub-lub-dub-dub"><a href="#Wub-lub-dub-dub" class="headerlink" title="Wub lub dub dub !"></a>Wub lub dub dub !</h1><p><strong>2023-11-4——2023-11-6</strong><br>站点基本建成，这个博客用于攥写Writeup与学习笔记等，可能有些许日常。<br><strong>2023-11-7</strong><br>解决了图片无法上传的问题：在<code>D:\Blog\source</code>新建<code>images</code>文件夹，引用时路径为<code>/images/xx.png</code>。<br>灵感来源：<a target="_blank" rel="noopener" href="https://quietfallhe.gitee.io/">https://quietfallhe.gitee.io/</a>;<br>尝试添加社交链接图标<br>成功 <strong>帅</strong><br>(强力驱动部分，因将其删除在此留念)<br><strong>2023-11-8</strong><br>开始使用强大的obsidian编写笔记，添加了友情链接。<br>开始编写关于栏。<br><strong>2023-11-9</strong><br>添加了冬季限定下雪动画</p>
+<h3 id="2023-11-27"><a href="#2023-11-27" class="headerlink" title="2023-11-27"></a>2023-11-27</h3><p>添加了笔记缩略显示，博客更加简洁了。</p>
+<h2 id="2023-11-12-不知道几号"><a href="#2023-11-12-不知道几号" class="headerlink" title="2023-11&#x2F;12-不知道几号"></a>2023-11&#x2F;12-不知道几号</h2><p>投资30块大米改用Typora写笔记了。</p>
+<h2 id="2023-12-18"><a href="#2023-12-18" class="headerlink" title="2023-12-18"></a>2023-12-18</h2><p>尝试添加音乐播放器。</p>
+<h2 id="2023-12-22"><a href="#2023-12-22" class="headerlink" title="2023-12-22"></a>2023-12-22</h2><p>冬至，修改了音乐播放器位置和侧边栏宽度。</p>
+<h2 id="2025-7-14"><a href="#2025-7-14" class="headerlink" title="2025-7-14"></a>2025-7-14</h2><p>重新启用网站了，换了域名，尝试解决评论区广告和访问量等问题。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/06/Havefun/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/06/Havefun/" class="post-title-link" itemprop="url">Havefun</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-06 20:58:25" itemprop="dateCreated datePublished" datetime="2023-11-06T20:58:25+08:00">2023-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Writeup/" itemprop="url" rel="index"><span itemprop="name">Writeup</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Buuctf-极客大挑战-2019-Havefun1"><a href="#Buuctf-极客大挑战-2019-Havefun1" class="headerlink" title="Buuctf-[极客大挑战 2019]Havefun1"></a>Buuctf-[极客大挑战 2019]Havefun1</h1><p>进入网页后看到一只猫<br>F12查看源代码之后发现注释如图  </p>
+<p><img src="/images/writeup1.png" alt="注释截图"></p>
+<p>根据注释尝试在页面中传入参数 <strong>?cat&#x3D;dog</strong> 后得到 <code>flag&#123;e6d6db06-3ffc-47cf-b17a-b853823b8994&#125;</code>  </p>
+<p><img src="/images/writeup2.png" alt="Flag截图"></p>
+<p><strong>图片一直出不来我真服了。事已至此先睡觉罢-2023&#x2F;11&#x2F;6.21:58.21</strong><br>first try:fail<br>second try</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rickk1c137.github.io/2023/11/06/First/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Rickk">
+      <meta itemprop="description" content="记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RickkCity">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/06/First/" class="post-title-link" itemprop="url">First</a>
+        </h2>
+
+        <div class="post-meta">
+	   
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-06 19:06:44" itemprop="dateCreated datePublished" datetime="2023-11-06T19:06:44+08:00">2023-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-10-12 22:50:36" itemprop="dateModified" datetime="2026-10-12T22:50:36+08:00">2026-10-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第一篇日志"><a href="#第一篇日志" class="headerlink" title="第一篇日志"></a>第一篇日志</h1><p>终于在期中爆炸后搭建好博客雏形，特此纪念。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+<div id="lv-container" data-id="livere" data-uid="MTAyMC81OTE2MC8zNTYyMg=="></div>
+<script type="text/javascript">
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Rickk"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Rickk</p>
+  <div class="site-description" itemprop="description">记录网络安全学习、CTF 靶场复现、课程笔记与个人思考。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Rickk1C137" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Rickk1C137" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/191141485?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;191141485?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fa bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      隔壁主页
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.maonie.top/" title="https:&#x2F;&#x2F;www.maonie.top&#x2F;" rel="noopener" target="_blank">猫涅的秘密结社</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://blog.benben.work/" title="http:&#x2F;&#x2F;blog.benben.work" rel="noopener" target="_blank">benben的个人博客</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://zggggg123.github.io/" title="https:&#x2F;&#x2F;zggggg123.github.io&#x2F;" rel="noopener" target="_blank">鱼塘</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://truthleader.github.io/" title="https:&#x2F;&#x2F;truthleader.github.io" rel="noopener" target="_blank">真理教教主的主页</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://mogo.work/" title="https:&#x2F;&#x2F;mogo.work" rel="noopener" target="_blank">沫篝的幻想世界</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+      <div id="music163player">
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=8406216810  &auto=1&height=430"></iframe>
+      </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+	<a target="_blank" rel="noopener" href="https://github.com/Rickk1C137" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023-11 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rickk</span>
+</div>
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共9.8k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>  
+  <script type="text/javascript" src="\js\snow.js"></script>
+</body>
+</html>
